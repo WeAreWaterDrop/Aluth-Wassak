@@ -103,5 +103,7 @@ a:hover {
 
     iframe {
         width: 300px;
+	.awimg{
+	width:150px;
     }
 }
