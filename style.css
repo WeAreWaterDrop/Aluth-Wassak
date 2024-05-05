@@ -7,7 +7,7 @@ body {
     width: 100%;
     display: grid;
     place-content: center;
-    background-image: url('./bg.png');
+    background-image: url('./bg.jpg');
     background-position: top center;
     background-position-y: 60%;
 }
