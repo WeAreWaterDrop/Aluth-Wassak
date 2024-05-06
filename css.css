@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+h2,h4{
+    text-shadow: 
+        1px 1px 0 white,  /* Black shadow offset 3px in both directions */
+        -1px -1px 0 white; /* Black shadow offset -3px in both directions */
+    color: black;
+}
+
+
+
 body {
     display: flex;
     justify-content: center;
@@ -33,6 +42,7 @@ header {
 }
 .para{
     margin-top: 22px;
+    -webkit-text-stroke: 3px white;
 }
 
 .contact {
