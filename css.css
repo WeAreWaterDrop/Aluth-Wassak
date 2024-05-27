@@ -30,7 +30,23 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    height: 150px;
+    height: 200px;
+}
+
+.video {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+video {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+img {
+    margin-top: 10px;
+    width: 600px;
 }
 
 .content {
@@ -84,6 +100,9 @@ li a:hover{
 }
 @media screen and (max-width: 600px) {
     iframe{
+        width: 100%;
+    }
+    img{
         width: 100%;
     }
     .container{
