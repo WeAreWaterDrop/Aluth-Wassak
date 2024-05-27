@@ -33,6 +33,17 @@ header {
     height: 150px;
 }
 
+.video {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+video {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .content {
     display: flex;
     flex-direction: column;
