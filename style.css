@@ -1,0 +1,80 @@
+.content{
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    width:100%;
+    height: 100%;
+    place-content: center;
+    background-image: url('./bg.png');
+    background-position: top center;
+}
+video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.link{
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.link img{
+    width: 50%;
+}
+
+
+/* .pages{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #2d30bd;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.pages img{
+    width: 50%;
+    border: none;
+} */
+
+
+
+.contact {
+    align-items: center;
+    text-align: center;
+}
+
+.wdlogo{
+    width: 20%; 
+    max-width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        width: 100%;
+        margin: 0;
+    }
+    .wdlogo{
+        width: 50px;
+    }
+    .contact,.copy {
+        font-size: 8px;
+        max-width: 200px;
+    }
+}
