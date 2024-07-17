@@ -1,109 +1,155 @@
-* {
+body{
     padding: 0;
     margin: 0;
 }
 
-body {
+.content{
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.menu{
+    background-image: url('./menu.png');
+    background-size: 100% 100%;
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.logowhite{
+    max-width: 50%;
+    aspect-ratio:4/1;
+    margin: -20px;
+    margin-bottom: -25px;
+}
+
+.menu-title{
+    margin-top: 20px;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu-title a{
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+
+body{
+    overflow-x: hidden;
+    width:100%;
+    background-size: 100% 100%;
     place-content: center;
-    background-image: url('./bg.jpg');
+    background-image: url('./bg.png');
     background-position: top center;
-    background-position-y: 60%;
+    background-attachment: fixed;
+}
+video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.page-content {
-    /* From https://css.glass */
-    
-    width: 600px;
-	padding: 10px 50px;
+.link{
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
-.container {
-    margin: 0 auto;
+.link img{
+    width: 50%;
+}
+
+
+/* .pages{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #2d30bd;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.pages img{
+    width: 50%;
+    border: none;
+} */
+
+
+
+.contact {
+    align-items: center;
     text-align: center;
 }
 
-.contact {
-    margin: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    /**/
+.wdlogo{
+    width: 20%; 
+    max-width: 150px;
+}
+
+.footer{
+    font-size: 20px;
     align-items: center;
-}
-
-.content p {
-    margin: 20px 0;
-}
-
-.header {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.header img {
-    width: 100px;
-}
-
-iframe {
-    align-self: center;
-    margin: 20px 0;
-}
-
-.fa-solid {
-    font-size: 1.2rem;
-}
-
-.address {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.address p {
-    text-align: left;
-    margin-left: 10px;
-}
-
-
-.footer {
-    margin: 30px 0;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    /* background-color: aqua; */
 }
 
-ul {
-    list-style: none;
-    display: inline-flex;
-    margin: 10px 0;
-    font-size: 1.8rem;
-    gap: 20px;
-}
-
-a {
-    color: black;
-}
-
-a:hover {
-    color: #2930BE;
-    transition: .3s;
-}
-
-@media only screen and (max-width: 400px) {
-    .container {
-        width: 300px;
+@media only screen and (max-width: 800px) {
+    body{
+        background-image: url('./bgmobile.jpg');
     }
-
-    iframe {
-        width: 300px;
-	.awimg{
-	width:150px;
+    .content {
+        width: 100%;
+        margin: 0;
+    }
+    .wdlogo{
+        width: 50px;
+    }
+    .contact,.copy {
+        font-size: 20px;
+        max-width: 400px;
+    }
+    .link{
+        flex-wrap: wrap;
+    }
+    .link img{
+        margin-left: 15%;
+    }
+    .menu-title a{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    .logowhite{
+        max-width: 80%;
+        max-height: 100px;
+        margin-top: -50px;
+        margin-right: -50%;
+        margin-left: -60px;
+    }
+    .footer iframe{
+        max-height: 300px;
     }
 }
