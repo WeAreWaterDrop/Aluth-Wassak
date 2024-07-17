@@ -129,8 +129,8 @@ video {
         width: 50px;
     }
     .contact,.copy {
-        font-size: 8px;
-        max-width: 200px;
+        font-size: 15px;
+        max-width: 300px;
     }
     .link{
         flex-wrap: wrap;
