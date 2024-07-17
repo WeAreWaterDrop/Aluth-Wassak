@@ -31,7 +31,78 @@ iframe{
 
 .images img{
     width: 32%;
-    min-width: 300px;
+    min-width: 400px;
     margin: 5px;
     aspect-ratio: 16 / 9;
+}
+
+.aluthwassakimg{
+    width: 30%;
+    margin-bottom: 8px;
+    max-width: 200px;
+}
+
+.aluthwassak-title{
+    background-color: rgba(0, 140, 255, 0.2);
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+.aluthwassak-title p{
+    margin: 10px;
+    width:70%;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.yttitle{
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+.yttitle img{
+    width: 30%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    max-width: 200px;
+}
+.prgmtitle{
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+.prgmtitle img{
+    width: 50%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    max-width: 400px;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .aluthwassak-title{
+        padding: 0;
+    }
+    .aluthwassak-title p{
+        font-size: 15px;
+    }
+    .prgmtitle img{
+        margin-top: -5px;
+        margin-bottom: -5px;
+    }
 }
