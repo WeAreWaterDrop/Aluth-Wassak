@@ -115,13 +115,15 @@ iframe{
 }
 
 .title-progress{
-    background-color: #f0f0f0;
+    padding-top: 8px;
+    background-color:#cce8ffe8;
     text-align: center;
     border-radius: 50px;
     width: 100%;
     margin-left: 1%;
     margin-right: 1%;
     font-size: 18px;
+    padding-bottom: 10px;
 }
 
 .music-player button{
@@ -130,17 +132,17 @@ iframe{
     height: 50px;
     border-radius: 50px;
     border: 0;
+    background-color: #cce8ffe8;
 }
 
 #song-title{
     font-size: 20px;
-    margin-bottom: -5px;
-    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-top: -8px;
 }
 
 #song-progress{
     width: 80%;
-    height: 5px;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 8px;
@@ -152,7 +154,22 @@ iframe{
 
 .music-player button:hover{
     cursor: pointer;
-    background-color: #bbbbbb;
+    background-color: #71bfff;
+}
+
+.title-volume{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#song-volume{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10px;
 }
 
 
@@ -168,5 +185,8 @@ iframe{
         margin-top: -5px;
         margin-bottom: -5px;
     }
-    
+    #song-volume{
+        display:none
+    }
+
 }
