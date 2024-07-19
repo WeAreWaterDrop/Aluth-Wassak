@@ -128,3 +128,52 @@ volumeSlider.value = audioPlayer.volume * 100;
 audioPlayer.pause();
 
 changePlayPause();
+
+
+
+/////////////////////////////////////////////////////////////////////////
+
+// Video Player
+
+
+const videos = [
+    './video/1.mp4',
+    './video/2.mp4',
+    './video/3.mp4',
+    './video/4.mp4',
+    './video/5.mp4'
+];
+
+let currentVideoIndex = 0;
+const videoPlayer = document.getElementById('headerVideoPlayer');
+const source = videoPlayer.getElementsByTagName('source')[0];
+const vprevButton = document.getElementById('videoPrev');
+const vnextButton = document.getElementById('videoNext');
+
+function changeVideo() {
+    source.src = videos[currentVideoIndex];
+    videoPlayer.load();
+}
+
+function nextVideo() {
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+    changeVideo();
+}
+
+function prevVideo() {
+    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+    changeVideo();
+}
+
+vprevButton.addEventListener('click', prevVideo);
+vnextButton.addEventListener('click', nextVideo);
+
+function checkVideoEnd() {
+    if (videoPlayer.currentTime >= videoPlayer.duration-1) {
+        nextVideo();
+    }
+}
+
+setInterval(checkVideoEnd, 500); // Check every second if the video has ended
+
+changeVideo();

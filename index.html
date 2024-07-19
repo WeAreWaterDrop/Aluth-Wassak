@@ -11,9 +11,13 @@
   <body>
     <div>
       <div class="header">
-        <video autoplay loop muted>
-          <source src="./header.mp4" type="video/mp4" />
+        <video autoplay loop muted id="headerVideoPlayer">
+          <source src="" type="video/mp4" />
         </video>
+        <div class="videobuttons">
+          <button id="videoPrev"><img src="./PlayerControls/prev.png" alt=""></button>
+          <button id="videoNext"><img src="./PlayerControls/next.png" alt=""></button>
+        </div>
       </div>
 
       <div class="menu">
@@ -171,6 +175,6 @@
         </button>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
