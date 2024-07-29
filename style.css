@@ -1,193 +1,211 @@
-body{
-    padding: 0;
-    margin: 0;
+html {
+  overflow-x: hidden;
 }
 
-.header{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.videobuttons{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
+body {
+  overflow-x: hidden;
+  width: 100%;
+  background-size: 100% 100%;
+  place-content: center;
+  background-image: url("./bg.jpg");
+  background-position: top center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
-.videobuttons button{
-    width: 5%;
-    background-color: rgba(255, 255, 255, 0);
-    margin-top: 0.2%;
-    aspect-ratio: 4/31;
-    border: 0;
+.header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;    
+  flex-direction: column;
+  aspect-ratio: 5/2;
 }
 
-.videobuttons button:hover{
-    cursor: pointer;
+.header video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.videobuttons button img{
-    width: 100%;
+.videobuttons {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.content{
-    align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+.videobuttons button {
+  width: 5%;
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 0.2%;
+  aspect-ratio: 4/31;
+  border: 0;
 }
 
-html{
-    overflow-x: hidden;
+.videobuttons button:hover {
+  cursor: pointer;
 }
 
-.menu{
-    background-image: url('./menu.png');
-    background-size: 100% 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    align-items: center;
+.videobuttons button img {
+  width: 100%;
+  max-width: 20px;
 }
 
-.logowhite{
-    max-width: 50%;
-    aspect-ratio:4/1;
-    margin: -20px;
-    margin-bottom: -25px;
+.content {
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
-.menu-title{
-    margin-top: 20px;
-    margin-right: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 30px;
+.menu {
+  margin-top: -20px;
+  background-image: url("./menu.png");
+  background-size: 100% 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
 }
 
-.menu-title a{
-    color: white;
-    font-size: 25px;
-    margin-left: 20px;
+.logowhite {
+  max-width: 50%;
+  aspect-ratio: 4/1;
+  margin: -20px;
+  margin-bottom: -25px;
 }
 
+.menu-title {
+  margin-top: 20px;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
 
-body{
-    overflow-x: hidden;
-    width:100%;
-    background-size: 100% 100%;
-    place-content: center;
-    background-image: url('./bg.png');
-    background-position: top center;
-    background-attachment: fixed;
+.menu-title a {
+  color: white;
+  font-size: 25px;
+  margin-left: 20px;
 }
 video {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-.link{
-    padding-left: 10%;
-    padding-right: 10%;
-    width: 100%;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+.link {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
-.link img{
-    width: 50%;
+.link img {
+  width: 50%;
 }
-
-
-/* .pages{
-    width: 100%;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #2d30bd;
-    margin-bottom: 20px;
-    align-items: center;
-}
-
-.pages img{
-    width: 50%;
-    border: none;
-} */
-
-
 
 .contact {
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
-.wdlogo{
-    width: 20%; 
-    max-width: 150px;
+.wdlogo {
+  width: 50%;
+  max-width: 150px;
 }
 
-.footer{
-    font-size: 20px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.footer {
+  font-size: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
+
+#imagePreview{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  padding-top: 50PX;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.87);
+  z-index: 2;
+}
+
+#imagePreviewClose{
+  position: fixed;
+  top: 0;
+  right: 1%;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.493);
+  z-index: 3;
+}
+
+#imagePreviewImg{
+  position: absolute;
+  width: 100%;
+  cursor: grab;
+  -webkit-user-drag: none; /* Safari */
+  -khtml-user-drag: none; /* Konqueror HTML */
+  -moz-user-drag: none; /* Firefox */
+  -o-user-drag: none; /* Opera */
+}
+
+
+
 
 @media only screen and (max-width: 800px) {
-    body{
-        background-image: url('./bgmobile.jpg');
-    }
-    .content {
-        width: 100%;
-        margin: 0;
-    }
-    .wdlogo{
-        width: 50px;
-    }
-    .contact,.copy {
-        font-size: 20px;
-        max-width: 400px;
-    }
-    .link{
-        flex-wrap: wrap;
-    }
-    .link img{
-        margin-left: 15%;
-    }
-    .menu-title a{
-        font-size: 12px;
-        margin-left: 20px;
-    }
-    .logowhite{
-        max-width: 80%;
-        max-height: 100px;
-        margin-top: -50px;
-        margin-right: -50%;
-        margin-left: -60px;
-    }
-    .footer iframe{
-        max-height: 300px;
-    }
-    .videobuttons button{
-        width: 10%;
-        background-color: rgba(255, 255, 255, 0.589);
-        margin-top: 0.2%;
-        aspect-ratio: 16/62;
-    }
-    
+  body {
+    background-image: url("./bgmobile.jpg");
+  }
+  .content {
+    width: 100%;
+    margin: 0;
+  }
+  .wdlogo {
+    width: 50px;
+  }
+  .contact,
+  .copy {
+    font-size: 20px;
+    max-width: 400px;
+  }
+  .link {
+    flex-wrap: wrap;
+  }
+  .link img {
+    margin-left: 15%;
+  }
+  .menu-title a {
+    font-size: 12px;
+    margin-left: 20px;
+  }
+  .logowhite {
+    max-width: 80%;
+    max-height: 100px;
+    margin-top: -50px;
+    margin-right: -50%;
+    margin-left: -60px;
+  }
+  .footer iframe {
+    max-height: 300px;
+  }
 }
