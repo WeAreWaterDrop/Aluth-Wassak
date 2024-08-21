@@ -172,6 +172,9 @@ video {
   body {
     background-image: url("./bgmobile.jpg");
   }
+  .menu-button{
+    max-width: 400px;
+  }
   .content {
     width: 100%;
     margin: 0;
