@@ -1,0 +1,208 @@
+iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 30px;
+}
+
+.video{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.video iframe{
+    width: 32%;
+    min-width: 300px;
+    margin: 5px;
+    aspect-ratio: 16 / 9;
+}
+
+.images{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.images img{
+    width: 80%;
+    margin: 5px;
+    aspect-ratio: 16 / 9;
+}
+
+#imagesDots{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#imagesDots button{
+    background-color: gray;
+    border: 0;
+    margin: 5px;
+    width: 10px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.aluthwassakimg{
+    width: 30%;
+    margin-bottom: 8px;
+    max-width: 200px;
+    margin: 1px;
+}
+
+.aluthwassak-title{
+    background-color: rgba(0, 140, 255, 0);
+    margin-bottom: 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-right: 10%;
+    align-self: center;
+}
+
+.aluthwassak-title p{
+    margin-top: -8px;
+    margin-bottom: 10px;
+    width:70%;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    text-shadow: 
+    1px 1px 0 white, 
+    -1px -1px 0 white, 
+    -1px 1px 0 white, 
+    1px -1px 0 white,
+    1px 0px 0 white, 
+    0px 1px 0 white, 
+    -1px 0px 0 white, 
+    0px -1px 0 white;
+}
+.yttitle{
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+.yttitle img{
+    width: 30%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    max-width: 200px;
+}
+.prgmtitle{
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+.prgmtitle img{
+    width: 50%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    max-width: 400px;
+}
+/* ...................................................... */
+
+.music{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#musicProgress{
+    width: 100%;
+    height: 5px;
+    z-index: 1;
+}
+
+.musicPlayer{
+    background-color: #f3f3f3;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -2px;
+    align-items: center;
+}
+
+#musicTitle{
+    width: 50%;
+    font-size: 21px;
+    font-weight: bold;
+}
+.musicControls{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.musicControls button{
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#musicPlay{
+    width: 70px;
+    margin: 8px;
+}
+.musicControls button img{
+    width: 100%;
+    height: 100%;
+}
+
+.musicVolumeControl{
+    color: #000;
+    display: flex;
+    flex-direction: row;
+}
+#musicVolume{
+    margin-left: 20px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#musicVolume img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .aluthwassak-title{
+        padding: 0;
+    }
+    .aluthwassak-title p{
+        font-size: 15px;
+    }
+    .prgmtitle img{
+        margin-top: -5px;
+        margin-bottom: -5px;
+    }
+    .musicVolumeControl{
+        display: none;
+    }
+
+}
