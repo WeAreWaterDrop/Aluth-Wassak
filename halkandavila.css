@@ -1,0 +1,57 @@
+.images{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.images img{
+    width: 80%;
+    margin: 5px;
+    aspect-ratio: 16 / 9;
+}
+
+#imagesDots{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#imagesDots button{
+    background-color: gray;
+    border: 0;
+    margin: 5px;
+    width: 10px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.TitleBG{
+    margin-top: 20px;
+    width: 100%;
+    background-image: url(./trpBar.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Title{
+    width: 50%;
+}
+
+.Times{
+    width: 60%;
+    max-width: 1000px;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.aboutWa{
+    width: 8%;
+}

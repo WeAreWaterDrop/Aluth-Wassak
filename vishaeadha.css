@@ -1,0 +1,35 @@
+.TitleBG{
+    margin-top: 20px;
+    width: 100%;
+    background-image: url(./trpBar.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Title{
+    width: 50%;
+}
+
+.Times{
+    width: 60%;
+    max-width: 1000px;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.aboutWa{
+    width: 8%;
+}
+.visharadaGana p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: clamp(14px, 4vw, 22px);
+}
