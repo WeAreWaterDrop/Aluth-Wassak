@@ -175,6 +175,7 @@ video {
   .menu-button{
     max-width: 400px;
   }
+
   .content {
     width: 100%;
     margin: 0;
@@ -203,6 +204,7 @@ video {
     margin-top: -50px;
     margin-right: -50%;
     margin-left: -60px;
+    margin-bottom: -50px;
   }
   .footer iframe {
     max-height: 300px;
