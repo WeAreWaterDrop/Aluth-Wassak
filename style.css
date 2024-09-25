@@ -164,8 +164,13 @@ video {
   -moz-user-drag: none; /* Firefox */
   -o-user-drag: none; /* Opera */
 }
-
-
+p{
+  text-shadow:
+      -1px -1px 0 #FFF,
+      1px -1px 0 #FFF,
+      -1px 1px 0 #FFF,
+      1px 1px 0 #FFF;
+}
 
 
 @media only screen and (max-width: 800px) {
