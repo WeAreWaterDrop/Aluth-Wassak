@@ -9,6 +9,7 @@
       body {
         font-family: Arial, sans-serif;
       }
+
       .padding {
         padding: 20px;
       }
@@ -83,7 +84,7 @@
         font-size: 16px;
         font-weight: bold;
         border: 0;
-        background-color: #afafaf;
+        background-color: #d8d8d8;
         height: 40px;
         width: 80%;
         padding: 10px;
@@ -99,13 +100,12 @@
         padding: 10px;
         border-radius: 16px;
       }
-      
 
-      .images{
-        display:grid;
+      .images {
+        display: grid;
       }
 
-      .images img{
+      .images img {
         width: 400px;
       }
 
@@ -140,101 +140,158 @@
         margin-top: 10px;
       }
 
+      #song0{
+        color: white;
+        background-color: #3a32dd;
+      }
+
+      #song1,#song2,#song3,#song4{
+        color: white;
+        background-color: #a500b4;
+      }
+
+      #song6{
+        color: white;
+        background-color: #939600;
+      }
+
+      #song8,#song9,#song10,#song11,#song12,#song13,#song14{
+        color: white;
+        background-color: rgb(109, 109, 109);
+      }
+
+      #song15{
+        color: white;
+        background-color: green;
+      }
+
+      #song16,#song17,#song18{
+        color: white;
+        background-color: rgb(134, 0, 0);
+      }
+
+
       @media only screen and (max-width: 600px) {
         .musicVolumeControl {
           display: none;
         }
-        
-      .images img{
-        width: 100%;
-      }
+
+        .images img {
+          width: 100%;
+        }
       }
     </style>
   </head>
   <body>
-    <div>
-      <div class="padding">
-        <a href="./visharada.html" id="goback">Go Back</a>
-        <h1>Audio</h1>
-        <div id="SongList"></div>
-        <button id="Download" class="Download">Download</button>
-      </div>
-      <div class="music">
-        <audio src="" id="mainPlayer" style="display: none"></audio>
-        <input type="range" id="musicProgress" min="0" max="100" value="0" />
-        <div class="musicPlayer">
-          <p id="musicTitle">Song title</p>
-          <div class="musicControls">
-            <button id="musicRepeat">
-              <img src="./PlayerControls/repeat.svg" alt="" id="musicRepeatImg" />
-            </button>
-            <button id="musicPrev">
-              <img src="./PlayerControls/prev.svg" alt="" id="musicPrevImg" />
-            </button>
-            <button id="musicPlay">
-              <img src="./PlayerControls/play.svg" alt="" id="musicPlayImg" />
-            </button>
-            <button id="musicNext">
-              <img src="./PlayerControls/next.svg" alt="" id="musicNextImg" />
-            </button>
-            <div class="musicVolumeControl">
-              <button id="musicVolume">
-                <img src="./PlayerControls/volume.svg" alt="" />
+    <div class="body">
+      <div>
+        <div class="padding">
+          <a href="./visharada.html" id="goback">Go Back</a>
+          <h1>Audio</h1>
+          <div id="SongList"></div>
+          <button id="Download" class="Download">Download</button>
+        </div>
+        <div class="music">
+          <audio src="" id="mainPlayer" style="display: none"></audio>
+          <input type="range" id="musicProgress" min="0" max="100" value="0" />
+          <div class="musicPlayer">
+            <p id="musicTitle">Song title</p>
+            <div class="musicControls">
+              <button id="musicRepeat">
+                <img
+                  src="./PlayerControls/repeat.svg"
+                  alt=""
+                  id="musicRepeatImg"
+                />
               </button>
-              <input type="range" id="musicVolumeRange" min="0" max="100" />
+              <button id="musicPrev">
+                <img src="./PlayerControls/prev.svg" alt="" id="musicPrevImg" />
+              </button>
+              <button id="musicPlay">
+                <img src="./PlayerControls/play.svg" alt="" id="musicPlayImg" />
+              </button>
+              <button id="musicNext">
+                <img src="./PlayerControls/next.svg" alt="" id="musicNextImg" />
+              </button>
+              <div class="musicVolumeControl">
+                <button id="musicVolume">
+                  <img src="./PlayerControls/volume.svg" alt="" />
+                </button>
+                <input type="range" id="musicVolumeRange" min="0" max="100" />
+              </div>
             </div>
           </div>
         </div>
+        <br />
+        <!-- <hr>
+        <div>
+          <div class="padding">
+            <h3>Saraswati Shlok</h3>
+            <audio controls>
+              <source src="./download/Ya Kundendu- Saraswati Shlok by P. Unnikrishnan & Rakshita, Haripriya & Anu(Young Superstars).mp3">
+            </audio>
+          </div>
+        </div> -->
       </div>
-      <br>
-      <!-- <hr>
+      <hr />
       <div>
-        <div class="padding">
-          <h3>Saraswati Shlok</h3>
-          <audio controls>
-            <source src="./download/Ya Kundendu- Saraswati Shlok by P. Unnikrishnan & Rakshita, Haripriya & Anu(Young Superstars).mp3">
-          </audio>
-        </div>
-      </div> -->
-    </div>
-
-
-    <hr>
-    <div>
         <div class="padding images" class>
-            <h1>Images</h1>
-
-            <img src="./download/SaraswatiShlok.jpg">
-            <div style="margin-top: 20px;"><a href="./download/SaraswatiShlok.jpg" class="Download" download>Download</a></div>
-            
+          <h1>Images</h1>
+          <img src="./download/SaraswatiShlok.jpg" />
+          <div style="margin-top: 20px">
+            <a href="./download/SaraswatiShlok.jpg" class="Download" download
+              >Download</a
+            >
+          </div>
         </div>
+      </div>
     </div>
-
-
-
 
     <script>
       // Music player
       const songs = [
-        "./download/thal/Bb Tabla Three Thal.mp3",
-        "./download/thal/Dadara thal C major.mp3",
+        "./download/Ya Kundendu- Saraswati Shlok.mp3",
         "./download/thal/Thampura A.mp3",
         "./download/thal/Thampura C.mp3",
         "./download/thal/Thampura D.mp3",
         "./download/thal/Thampura G.mp3",
+        "./download/thal/Bb Tabla Three Thal.mp3",
+        "./download/thal/Dadara thal C major.mp3",
         "./download/thal/Three Thal C major.mp3",
-        "./download/Ya Kundendu- Saraswati Shlok.mp3"
+        "./download/new thall/Tabla ( A )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
+        "./download/new thall/Tabla ( A-D ) Raga Malkouns Tempo 140 (We Are Water Drop Academy Design ).mp3",
+        "./download/new thall/Tabla ( C-F ) Raga Malkouns Tempo 140 (We Are Water Drop Academy Design ).mp3",
+        "./download/new thall/Tabla ( D Major )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
+        "./download/new thall/Tabla ( G )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
+        "./download/new thall/Tabla (B Flat)  Tempo 140 (We Are Water Drop Academy Design ).mp3",
+        "./download/new thall/Tabla C major Tempo 140 (We Are Water Drop Academy Design ).mp3",
+        "./download/new thall/Tabla Tempo 145  (C major )  (We Are Water Drop Academy Design ).mp3",
+        "./download/new thall/Tabla Ektal ( A ) Badth Keyl Tempo 130  ( We Are Water Drop Academy).mp3",
+        "./download/new thall/Tabla Ektal (B Flat ) Badth Keyl ( We Are Water Drop Academy).mp3",
+        "./download/new thall/Tabla Ektal (C major) Badth Keyl ( We Are Water Drop Academy).mp3",
         // Add paths to your songs here
       ];
       const SongNames = [
-      "Bb Tabla Three Thal",
-        "Dadara thal C major",
+        "Ya Kundendu- Saraswati Shlok",
         "Thampura A",
         "Thampura C",
         "Thampura D",
         "Thampura G",
+        "Bb Tabla Three Thal",
+        "Dadara thal C major",
+
         "Three Thal C major",
-        "Ya Kundendu- Saraswati Shlok"
+        "Tabla ( A )  Tempo 140 (We Are Water Drop Academy Design )",
+        "Tabla ( A-D ) Raga Malkouns Tempo 140 (We Are Water Drop Academy Design )",
+        "Tabla ( C-F ) Raga Malkouns Tempo 140 (We Are Water Drop Academy Design )",
+        "Tabla ( D Major )  Tempo 140 (We Are Water Drop Academy Design )",
+        "Tabla ( G )  Tempo 140 (We Are Water Drop Academy Design )",
+        "Tabla (B Flat)  Tempo 140 (We Are Water Drop Academy Design )",
+        "Tabla C major Tempo 140 (We Are Water Drop Academy Design )",
+        "Tabla Tempo 145  (C major )  (We Are Water Drop Academy Design )",
+        "Tabla Ektal ( A ) Badth Keyl Tempo 130  ( We Are Water Drop Academy)",
+        "Tabla Ektal (B Flat ) Badth Keyl ( We Are Water Drop Academy)",
+        "Tabla Ektal (C major) Badth Keyl ( We Are Water Drop Academy)",
         // Add names of your songs here
       ];
 
@@ -315,12 +372,11 @@
       function updateProgress() {
         musicProgress.value =
           (mainPlayer.currentTime / mainPlayer.duration) * 100;
-        if (musicProgress.value==100 && repeat == 0) {
+        if (musicProgress.value == 100 && repeat == 0) {
           nextSong();
           mainPlayer.play();
           musicPlayImg.src = playPause[1];
-        }
-        else if (musicProgress.value==100 && repeat == 1){
+        } else if (musicProgress.value == 100 && repeat == 1) {
           mainPlayer.currentTime = 0;
           mainPlayer.play;
           musicPlayImg.src = playPause[1];
@@ -332,7 +388,7 @@
       musicProgress.addEventListener("change", () => {
         mainPlayer.currentTime =
           (musicProgress.value * mainPlayer.duration) / 100;
-        if (musicProgress.value==100) {
+        if (musicProgress.value == 100) {
           nextSong();
         }
         mainPlayer.play();
@@ -343,8 +399,6 @@
         updateProgress();
       }, 1000);
 
-
-
       // Select files
 
       let innerText =
@@ -352,7 +406,8 @@
       const SongList = document.getElementById("SongList");
 
       for (let i = 0; i < SongNames.length; i++) {
-        innerText += `<option value="${i}">${SongNames[i]}</option>`;
+        id="song"+String(i);
+        innerText += `<option id="${id}" value="${i}">${SongNames[i]}</option>`;
       }
       SongList.innerHTML = innerText;
 
