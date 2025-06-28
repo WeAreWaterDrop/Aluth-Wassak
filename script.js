@@ -1,10 +1,3 @@
-function closepopup(){
-  document.getElementById("popup").style.display = "none";
-};
-
-
-
-
 // Music player
 const songs = [
   "./Song/Ammage Adare.mp3",
