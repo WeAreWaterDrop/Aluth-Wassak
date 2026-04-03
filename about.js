@@ -18,3 +18,10 @@ document.querySelectorAll('.aboutWa').forEach(img => {
     }
   });
 });
+
+function toClassFiles(){
+  var password = prompt("Enter Pin")
+  if(password == "0609"){
+    window.location.href = "./download.html";
+  }
+}
