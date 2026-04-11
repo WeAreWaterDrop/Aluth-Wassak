@@ -48,7 +48,7 @@
       padding: 40px 20px 140px 20px;
     }
 
-    #goback {
+    .nav-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -63,7 +63,7 @@
       backdrop-filter: blur(10px);
     }
 
-    #goback:hover {
+    .nav-link:hover {
       transform: translateX(-4px);
       background: rgba(255, 255, 255, 0.25);
     }
@@ -308,9 +308,15 @@
 
 <body>
   <div class="container">
-    <div style="display: flex; width: 100%; justify-content: center">
-      <a href="./visharada.html" id="goback">
+    <div style="display: flex; width: 100%; justify-content: center; gap: 12px; flex-wrap: wrap;">
+      <a href="./visharada.html" class="nav-link">
         <i data-lucide="home" size="18"></i> Home Page
+      </a>
+      <a href="https://web.facebook.com/dahamwaterdrop" target="_blank" class="nav-link">
+        <i data-lucide="link" size="18"></i> Facebook
+      </a>
+      <a href="https://www.youtube.com/@wearewaterdropacademy2743" target="_blank" class="nav-link">
+        <i data-lucide="link" size="18"></i> YouTube
       </a>
     </div>
 
