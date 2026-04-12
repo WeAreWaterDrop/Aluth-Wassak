@@ -222,7 +222,7 @@
       margin: 0;
       font-weight: 600;
       font-size: 0.95rem;
-      white-space: nowrap;
+      /* white-space: nowrap; */
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -291,12 +291,10 @@
         display: none;
       }
 
-      .song-info {
-        display: none;
-      }
-
       .player-content {
         justify-content: center;
+        display: flex;
+        flex-direction: column;
       }
 
       .container {
@@ -320,8 +318,8 @@
       </a>
     </div>
 
-    <div class="card" style="padding: 20px 10px 10px 10px">
-      <img src="./download/images/main.png" alt="" id="mainImg" />
+    <div style="margin: 0; padding: 0; margin-bottom: 5px;">
+      <img src="./download/images/main.webp" alt="" id="mainImg"/>
     </div>
 
     <div class="card">
@@ -355,23 +353,24 @@
           <div class="song-info">
             <p id="musicTitle">Ready to play</p>
           </div>
-          <div class="player-controls">
-            <button id="musicRepeat" class="ctrl-btn" title="Repeat">
-              <i data-lucide="repeat" size="18"></i>
-            </button>
-            <button id="musicPrev" class="ctrl-btn" title="Previous">
-              <i data-lucide="skip-back" size="22"></i>
-            </button>
-            <button id="musicPlay" class="ctrl-btn" title="Play/Pause">
-              <i data-lucide="play" id="playIcon" size="24"></i>
-            </button>
-            <button id="musicNext" class="ctrl-btn" title="Next">
-              <i data-lucide="skip-forward" size="22"></i>
-            </button>
-
-            <div class="volume-group">
-              <i data-lucide="volume-2" size="18" style="color: #9ca3af"></i>
-              <input type="range" id="musicVolumeRange" min="0" max="100" value="80" />
+          <div>
+            <div class="player-controls">
+              <button id="musicPrev" class="ctrl-btn" title="Previous">
+                <i data-lucide="skip-back" size="22"></i>
+              </button>
+              <button id="musicPlay" class="ctrl-btn" title="Play/Pause">
+                <i data-lucide="play" id="playIcon" size="24"></i>
+              </button>
+              <button id="musicNext" class="ctrl-btn" title="Next">
+                <i data-lucide="skip-forward" size="22"></i>
+              </button>
+              <button id="musicRepeat" class="ctrl-btn" title="Repeat">
+                <i data-lucide="repeat" size="18"></i>
+              </button>
+              <div class="volume-group">
+                <i data-lucide="volume-2" size="18" style="color: #9ca3af"></i>
+                <input type="range" id="musicVolumeRange" min="0" max="100" value="80" />
+              </div>
             </div>
           </div>
         </div>
