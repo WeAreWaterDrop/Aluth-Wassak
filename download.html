@@ -40,6 +40,7 @@
       color: var(--text-dark);
       line-height: 1.5;
       min-height: 100vh;
+      padding: 0;
     }
 
     .container {
@@ -305,7 +306,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" style="padding-bottom: 0;">
     <div style="display: flex; width: 100%; justify-content: center; gap: 12px; flex-wrap: wrap;">
       <a href="./visharada.html" class="nav-link">
         <i data-lucide="home" size="18"></i> Home Page
@@ -317,11 +318,12 @@
         <i data-lucide="link" size="18"></i> YouTube
       </a>
     </div>
-
-    <div style="margin: 0; padding: 0; margin-bottom: 5px;">
-      <img src="./download/images/main.webp" alt="" id="mainImg"/>
+  </div>
+    <div
+      style="margin: 0; padding: 0; margin-bottom: 20px; display: flex;align-self: center; align-items: center; flex-direction: column;">
+      <img src="./download/images/main.webp" alt="" id="mainImg" style="max-width: 800px; margin: 0;padding: 0;" />
     </div>
-
+  <div class="container">
     <div class="card">
       <h1>Audio - Tampura & Tabla</h1>
       <div id="SongList"></div>
@@ -342,35 +344,33 @@
     </div> -->
 
     <!-- Player Bar -->
-    <div class="card">
-      <div class="player-bar">
-        <div class="progress-container">
-          <input type="range" id="musicProgress" min="0" max="100" value="0" />
-        </div>
-        <div class="player-content">
-          <audio src="" id="mainPlayer" style="display: none"></audio>
+    <div class="player-bar" style="margin: 30px 0px 30px 0px">
+      <div class="progress-container">
+        <input type="range" id="musicProgress" min="0" max="100" value="0" />
+      </div>
+      <div class="player-content">
+        <audio src="" id="mainPlayer" style="display: none"></audio>
 
-          <div class="song-info">
-            <p id="musicTitle">Ready to play</p>
-          </div>
-          <div>
-            <div class="player-controls">
-              <button id="musicPrev" class="ctrl-btn" title="Previous">
-                <i data-lucide="skip-back" size="22"></i>
-              </button>
-              <button id="musicPlay" class="ctrl-btn" title="Play/Pause">
-                <i data-lucide="play" id="playIcon" size="24"></i>
-              </button>
-              <button id="musicNext" class="ctrl-btn" title="Next">
-                <i data-lucide="skip-forward" size="22"></i>
-              </button>
-              <button id="musicRepeat" class="ctrl-btn" title="Repeat">
-                <i data-lucide="repeat" size="18"></i>
-              </button>
-              <div class="volume-group">
-                <i data-lucide="volume-2" size="18" style="color: #9ca3af"></i>
-                <input type="range" id="musicVolumeRange" min="0" max="100" value="80" />
-              </div>
+        <div class="song-info">
+          <p id="musicTitle">Ready to play</p>
+        </div>
+        <div>
+          <div class="player-controls">
+            <button id="musicPrev" class="ctrl-btn" title="Previous">
+              <i data-lucide="skip-back" size="22"></i>
+            </button>
+            <button id="musicPlay" class="ctrl-btn" title="Play/Pause">
+              <i data-lucide="play" id="playIcon" size="24"></i>
+            </button>
+            <button id="musicNext" class="ctrl-btn" title="Next">
+              <i data-lucide="skip-forward" size="22"></i>
+            </button>
+            <button id="musicRepeat" class="ctrl-btn" title="Repeat">
+              <i data-lucide="repeat" size="18"></i>
+            </button>
+            <div class="volume-group">
+              <i data-lucide="volume-2" size="18" style="color: #9ca3af"></i>
+              <input type="range" id="musicVolumeRange" min="0" max="100" value="80" />
             </div>
           </div>
         </div>
