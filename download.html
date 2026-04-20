@@ -321,7 +321,7 @@
   </div>
     <div
       style="margin: 0; padding: 0; margin-bottom: 20px; display: flex;align-self: center; align-items: center; flex-direction: column;">
-      <img src="./download/images/main.webp" alt="" id="mainImg" style="max-width: 800px; margin: 0;padding: 0;" />
+      <img src="" alt="" id="mainImg" style="max-width: 800px; margin: 0;padding: 0;" />
     </div>
   <div class="container">
     <div class="card">
@@ -568,6 +568,20 @@
       link.click();
       document.body.removeChild(link);
     });
+
+    function changeTopImage(){
+      images=[
+        "./download/images/1.webp",
+        "./download/images/2.webp",
+        "./download/images/3.webp",
+      ]
+      const mimg = document.getElementById("mainImg")
+      var sec = new Date().getSeconds(); 
+      n=sec%3;
+      console.log(n)
+      mimg.src=images[n]
+    }
+    changeTopImage();
   </script>
 </body>
 
