@@ -1,0 +1,100 @@
+.content {
+    font-size: clamp(14px, 4vw, 22px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.TitleBG {
+    margin-top: 20px;
+    width: 100%;
+    background-image: url(./trpBar.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Title {
+    width: 50%;
+}
+
+.content p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.Times {
+    width: 60%;
+    max-width: 1000px;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 30px;
+}
+
+.aboutWa {
+    width: 8%;
+}
+
+.yttitle {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+.yttitle img {
+    width: 80%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    max-width: 600px;
+}
+
+.video {
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.video iframe {
+    margin: 2px;
+    width: 30%;
+    min-width: 300px;
+    aspect-ratio: 16 / 9;
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .yttitle img {
+        margin-top: -5px;
+        margin-bottom: -5px;
+    }
+    .Times {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
