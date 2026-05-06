@@ -1,342 +1,332 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Downloads</title>
-    <!-- Lucide Icons Library -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-      :root {
-        --main-blue: #3130d8;
-        --hover-blue: #2625b0;
-        --light-blue: #4e4df0;
-        --text-dark: #ffffff;
-        --text-muted: #d1d5db;
-        --bg-main: #3130d8;
-        --card-bg: rgba(255, 255, 255, 0.1);
-        --white: #ffffff;
-      }
 
-      * {
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downloads</title>
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --main-blue: #3130d8;
+      --hover-blue: #2625b0;
+      --light-blue: #4e4df0;
+      --text-dark: #ffffff;
+      --text-muted: #d1d5db;
+      --bg-main: #3130d8;
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --white: #ffffff;
+    }
 
-      body {
-        font-family:
-          "Inter",
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          sans-serif;
-        background-color: var(--bg-main);
-        background-image:
-          radial-gradient(circle at 0% 0%, #4e4df0 0%, transparent 50%),
-          radial-gradient(circle at 100% 100%, #1e1db9 0%, transparent 50%);
-        background-attachment: fixed;
-        margin: 0;
-        color: var(--text-dark);
-        line-height: 1.5;
-        min-height: 100vh;
-        padding: 0;
-      }
+    * {
+      box-sizing: border-box;
+    }
 
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px 20px 140px 20px;
-      }
+    body {
+      font-family:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+      background-color: var(--bg-main);
+      background-image:
+        radial-gradient(circle at 0% 0%, #4e4df0 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, #1e1db9 0%, transparent 50%);
+      background-attachment: fixed;
+      margin: 0;
+      color: var(--text-dark);
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 0;
+    }
 
-      .nav-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--white);
-        text-decoration: none;
-        font-weight: 600;
-        margin-bottom: 32px;
-        transition: transform 0.2s;
-        background: rgba(255, 255, 255, 0.15);
-        padding: 8px 16px;
-        border-radius: 12px;
-        backdrop-filter: blur(10px);
-      }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 140px 20px;
+    }
 
-      .nav-link:hover {
-        transform: translateX(-4px);
-        background: rgba(255, 255, 255, 0.25);
-      }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 32px;
+      transition: transform 0.2s;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
 
-      h1 {
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 24px;
-        color: var(--white);
-      }
+    .nav-link:hover {
+      transform: translateX(-4px);
+      background: rgba(255, 255, 255, 0.25);
+    }
 
-      /* Card Styling */
-      .card {
-        background: var(--card-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        padding: 32px;
-        margin-bottom: 32px;
-      }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
 
-      /* Form Elements */
-      #SelectSongLable {
-        display: block;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--text-muted);
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
+    /* Card Styling */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
 
-      #mainImg {
-        width: 100%;
-      }
+    /* Form Elements */
+    #SelectSongLable {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
 
-      #SelectSong {
-        width: 100%;
-        padding: 14px 16px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background-color: rgba(255, 255, 255, 0.1);
-        color: white;
-        border-radius: 12px;
-        font-size: 1rem;
-        outline: none;
-        cursor: pointer;
-        transition: all 0.2s;
-        appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 16px center;
-        background-size: 16px;
-      }
+    #mainImg {
+      width: 100%;
+    }
 
-      #SelectSong:focus {
-        border-color: white;
-        background-color: rgba(255, 255, 255, 0.2);
-      }
+    #SelectSong {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 16px;
+    }
 
-      #SelectSong option {
-        background-color: #1e1db9;
-        color: white;
-      }
+    #SelectSong:focus {
+      border-color: white;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
 
-      /* Buttons */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 14px 28px;
-        border-radius: 12px;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.2s;
-        border: none;
-        text-decoration: none;
-      }
+    #ඡ option {
+      background-color: #1e1db9;
+      color: white;
+    }
 
-      .btn-primary {
-        background-color: #10b981;
-        color: white;
-      }
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      text-decoration: none;
+    }
 
-      .btn-primary:hover {
-        background-color: #f0f0f0;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-      }
+    .btn-primary {
+      background-color: #10b981;
+      color: white;
+    }
 
-      .btn-success {
-        background-color: #10b981;
-        color: white;
-      }
+    .btn-primary:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    }
 
-      .btn-success:hover {
-        background-color: #059669;
-        transform: translateY(-2px);
-      }
+    .btn-success {
+      background-color: #10b981;
+      color: white;
+    }
 
-      /* Floating Player */
-      .player-bar {
-        bottom: 24px;
-        background: rgba(17, 24, 39, 0.95);
-        backdrop-filter: blur(10px);
-        border-radius: 24px;
-        padding: 12px 24px;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-        color: white;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
+    .btn-success:hover {
+      background-color: #059669;
+      transform: translateY(-2px);
+    }
 
-      .progress-container {
-        width: 100%;
-        position: absolute;
-        top: -15px;
-        left: 0;
-        padding: 0 24px;
-      }
+    /* Floating Player */
+    .player-bar {
+      bottom: 24px;
+      background: rgba(17, 24, 39, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 12px 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-      #musicProgress {
-        width: 100%;
-        height: 4px;
-        cursor: pointer;
-        appearance: none;
-        background: #374151;
-        border-radius: 2px;
-        outline: none;
-      }
+    .progress-container {
+      width: 100%;
+      position: absolute;
+      top: -15px;
+      left: 0;
+      padding: 0 24px;
+    }
 
-      #musicProgress::-webkit-slider-thumb {
-        appearance: none;
-        width: 14px;
-        height: 14px;
-        background: var(--white);
-        border: 2px solid var(--main-blue);
-        border-radius: 50%;
-        cursor: pointer;
+    #musicProgress {
+      width: 100%;
+      height: 4px;
+      cursor: pointer;
+      appearance: none;
+      background: #374151;
+      border-radius: 2px;
+      outline: none;
+    }
+
+    #musicProgress::-webkit-slider-thumb {
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      background: var(--white);
+      border: 2px solid var(--main-blue);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .player-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .song-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    #musicTitle {
+      margin: 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      /* white-space: nowrap; */
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .player-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ctrl-btn {
+      background: transparent;
+      border: none;
+      color: #9ca3af;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .ctrl-btn:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .ctrl-btn.active {
+      color: #60a5fa;
+    }
+
+    #musicPlay {
+      background: var(--white);
+      color: var(--main-blue);
+      padding: 14px;
+    }
+
+    #musicPlay:hover {
+      transform: scale(1.1);
+      background: #f8fafc;
+    }
+
+    .volume-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #musicVolumeRange {
+      width: 70px;
+      accent-color: var(--white);
+    }
+
+    /* Image Section */
+    .resource-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 640px) {
+      .volume-group {
+        display: none;
       }
 
       .player-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-      }
-
-      .song-info {
-        flex: 1;
-        min-width: 0;
-      }
-
-      #musicTitle {
-        margin: 0;
-        font-weight: 600;
-        font-size: 0.95rem;
-        /* white-space: nowrap; */
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .player-controls {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .ctrl-btn {
-        background: transparent;
-        border: none;
-        color: #9ca3af;
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
         justify-content: center;
-        transition: all 0.2s;
-      }
-
-      .ctrl-btn:hover {
-        color: white;
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .ctrl-btn.active {
-        color: #60a5fa;
-      }
-
-      #musicPlay {
-        background: var(--white);
-        color: var(--main-blue);
-        padding: 14px;
-      }
-
-      #musicPlay:hover {
-        transform: scale(1.1);
-        background: #f8fafc;
-      }
-
-      .volume-group {
         display: flex;
-        align-items: center;
-        gap: 10px;
+        flex-direction: column;
       }
 
-      #musicVolumeRange {
-        width: 70px;
-        accent-color: var(--white);
+      .container {
+        padding-top: 20px;
       }
+    }
+  </style>
+</head>
 
-      /* Image Section */
-      .resource-img {
-        width: 100%;
-        border-radius: 12px;
-        margin-bottom: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-      }
-
-      /* Mobile adjustments */
-      @media (max-width: 640px) {
-        .volume-group {
-          display: none;
-        }
-
-        .player-content {
-          justify-content: center;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .container {
-          padding-top: 20px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="container" style="padding-bottom: 0">
-      <div
-        style="
+<body>
+  <div class="container" style="padding-bottom: 0">
+    <div style="
           display: flex;
           width: 100%;
           justify-content: center;
           gap: 12px;
           flex-wrap: wrap;
-        "
-      >
-        <a href="./visharada.html" class="nav-link">
-          <i data-lucide="home" size="18"></i> Home Page
-        </a>
-        <a
-          href="https://web.facebook.com/dahamwaterdrop"
-          target="_blank"
-          class="nav-link"
-        >
-          <i data-lucide="link" size="18"></i> Facebook
-        </a>
-        <a
-          href="https://www.youtube.com/@wearewaterdropacademy2743"
-          target="_blank"
-          class="nav-link"
-        >
-          <i data-lucide="link" size="18"></i> YouTube
-        </a>
-      </div>
+        ">
+      <a href="./visharada.html" class="nav-link">
+        <i data-lucide="home" size="18"></i> Home Page
+      </a>
+      <a href="https://web.facebook.com/dahamwaterdrop" target="_blank" class="nav-link">
+        <i data-lucide="link" size="18"></i> Facebook
+      </a>
+      <a href="https://www.youtube.com/@wearewaterdropacademy2743" target="_blank" class="nav-link">
+        <i data-lucide="link" size="18"></i> YouTube
+      </a>
     </div>
-    <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
-      <div
-        style="
+  </div>
+  <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+    <div style="
           margin: 0;
           padding: 0;
           margin-bottom: 20px;
@@ -347,28 +337,22 @@
           width: 100vw;
           max-width: 800px;
           aspect-ratio: 4/3;
-        "
-      >
-        <img
-          src=""
-          alt=""
-          id="mainImg"
-          style="max-width: 800px; margin: 0; padding: 0"
-        />
+        ">
+      <img src="" alt="" id="mainImg" style="max-width: 800px; margin: 0; padding: 0" />
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h1>Audio - Tampura & Tabla</h1>
+      <div id="SongList"></div>
+      <div style="margin-top: 28px">
+        <button id="Download" class="btn btn-primary">
+          <i data-lucide="download" size="20"></i> Download Song
+        </button>
       </div>
     </div>
-    <div class="container">
-      <div class="card">
-        <h1>Audio - Tampura & Tabla</h1>
-        <div id="SongList"></div>
-        <div style="margin-top: 28px">
-          <button id="Download" class="btn btn-primary">
-            <i data-lucide="download" size="20"></i> Download Song
-          </button>
-        </div>
-      </div>
-      <!-- Categoryselect......................................................................... -->
-      <!-- 
+    <!-- Categoryselect......................................................................... -->
+    <!-- 
     <div class="card">
       <h1>Exam Raga</h1>
       <h2>Select Category</h2>
@@ -377,266 +361,254 @@
       <div id="SongSelection2"></div>
     </div> -->
 
-      <!-- Player Bar -->
-      <div class="player-bar" style="margin: 30px 0px 30px 0px">
-        <div class="progress-container">
-          <input type="range" id="musicProgress" min="0" max="100" value="0" />
-        </div>
-        <div class="player-content">
-          <audio src="" id="mainPlayer" style="display: none"></audio>
+    <!-- Player Bar -->
+    <div class="player-bar" style="margin: 30px 0px 30px 0px">
+      <div class="progress-container">
+        <input type="range" id="musicProgress" min="0" max="100" value="0" />
+      </div>
+      <div class="player-content">
+        <audio src="" id="mainPlayer" style="display: none"></audio>
 
-          <div class="song-info">
-            <p id="musicTitle">Ready to play</p>
-          </div>
-          <div>
-            <div class="player-controls">
-              <button id="musicPrev" class="ctrl-btn" title="Previous">
-                <i data-lucide="skip-back" size="22"></i>
-              </button>
-              <button id="musicPlay" class="ctrl-btn" title="Play/Pause">
-                <i data-lucide="play" id="playIcon" size="24"></i>
-              </button>
-              <button id="musicNext" class="ctrl-btn" title="Next">
-                <i data-lucide="skip-forward" size="22"></i>
-              </button>
-              <button id="musicRepeat" class="ctrl-btn" title="Repeat">
-                <i data-lucide="repeat" size="18"></i>
-              </button>
-              <div class="volume-group">
-                <i data-lucide="volume-2" size="18" style="color: #9ca3af"></i>
-                <input
-                  type="range"
-                  id="musicVolumeRange"
-                  min="0"
-                  max="100"
-                  value="80"
-                />
-              </div>
+        <div class="song-info">
+          <p id="musicTitle">Ready to play</p>
+        </div>
+        <div>
+          <div class="player-controls">
+            <button id="musicPrev" class="ctrl-btn" title="Previous">
+              <i data-lucide="skip-back" size="22"></i>
+            </button>
+            <button id="musicPlay" class="ctrl-btn" title="Play/Pause">
+              <i data-lucide="play" id="playIcon" size="24"></i>
+            </button>
+            <button id="musicNext" class="ctrl-btn" title="Next">
+              <i data-lucide="skip-forward" size="22"></i>
+            </button>
+            <button id="musicRepeat" class="ctrl-btn" title="Repeat">
+              <i data-lucide="repeat" size="18"></i>
+            </button>
+            <div class="volume-group">
+              <i data-lucide="volume-2" size="18" style="color: #9ca3af"></i>
+              <input type="range" id="musicVolumeRange" min="0" max="100" value="80" />
             </div>
           </div>
         </div>
       </div>
-
-      <div class="card">
-        <h1>Image</h1>
-        <img
-          src="./download/SaraswatiShlok.jpg"
-          alt="Saraswati Shlok"
-          class="resource-img"
-          onerror="
-            this.src = 'https://placehold.co/600x400?text=Saraswati+Shlok'
-          "
-        />
-        <a
-          href="./download/SaraswatiShlok.jpg"
-          class="btn btn-primary"
-          download
-        >
-          <i data-lucide="image" size="20"></i> Download Image
-        </a>
-      </div>
-
-      <div class="card" style="text-align: center">
-        <h1>Applications</h1>
-        <p style="color: var(--text-muted); margin-bottom: 24px">
-          Get the official Water Drop Academy App for Android
-        </p>
-        <a
-          href="https://github.com/WeAreWaterDrop/Aluth-Wassak/releases/download/v0.0.2/WD_Academy.apk"
-          class="btn btn-success"
-          download
-        >
-          <i data-lucide="smartphone" size="20"></i> WD Academy App
-          <i data-lucide="download" size="20"></i>
-        </a>
-      </div>
-
-      <!-- ...............................Exam Video Raga........................... -->
-      <!-- <div class="card">
-      <h1>Exam Video Raga</h1>
-    </div> -->
     </div>
 
-    <script>
+    <div class="card">
+      <h1>Image</h1>
+      <img src="./download/SaraswatiShlok.jpg" alt="Saraswati Shlok" class="resource-img" onerror="
+            this.src = 'https://placehold.co/600x400?text=Saraswati+Shlok'
+          " />
+      <a href="./download/SaraswatiShlok.jpg" class="btn btn-primary" download>
+        <i data-lucide="image" size="20"></i> Download Image
+      </a>
+    </div>
+
+    <div class="card" style="text-align: center">
+      <h1>Applications</h1>
+      <p style="color: var(--text-muted); margin-bottom: 24px">
+        Get the official Water Drop Academy App for Android
+      </p>
+      <a href="https://github.com/WeAreWaterDrop/Aluth-Wassak/releases/download/v0.0.2/WD_Academy.apk"
+        class="btn btn-success" download>
+        <i data-lucide="smartphone" size="20"></i> WD Academy App
+        <i data-lucide="download" size="20"></i>
+      </a>
+    </div>
+
+    <!-- ...............................Exam Video Raga........................... -->
+    <!-- <div class="card">
+      <h1>Exam Video Raga</h1>
+    </div> -->
+    <div class="card" style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <img src="./boc.webp" style="width: 120px; margin: -20px;" alt="">
+      <p style="text-align: center;">(Bentota- Branch) <br> T D S Madhushankha Peiris <br> Acount No- 85128718</p>
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const songs = [
+      "./download/Ya Kundendu- Saraswati Shlok.mp3",
+      "./download/thal/Thampura A.mp3",
+      "./download/new thall/Tampura Bb.mp3",
+      "./download/thal/Thampura C.mp3",
+      "./download/thal/Thampura D.mp3",
+      "./download/thal/Thampura G.mp3",
+      "./download/thal/Bb Tabla Three Thal.mp3",
+      "./download/thal/Dadara thal C major.mp3",
+      "./download/thal/Three Thal C major.mp3",
+      "./download/new thall/Tabla ( A )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
+      "./download/new thall/Tabla ( A-D ) Raga Malkouns Tempo 140 (We Are Water Drop Academy Design ).mp3",
+      "./download/new thall/Tabla ( C-F ) Raga Malkouns Tempo 140 (We Are Water Drop Academy Design ).mp3",
+      "./download/new thall/Tabla ( D Major )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
+      "./download/new thall/Tabla ( G )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
+      "./download/new thall/Tabla (B Flat)  Tempo 140 (We Are Water Drop Academy Design ).mp3",
+      "./download/new thall/Tabla C major Tempo 140 (We Are Water Drop Academy Design ).mp3",
+      "./download/new thall/Tabla Tempo 145  (C major )  (We Are Water Drop Academy Design ).mp3",
+      "./download/new thall/Tabla Ektal ( A ) Badth Keyl Tempo 130  ( We Are Water Drop Academy).mp3",
+      "./download/new thall/Tabla Ektal (B Flat ) Badth Keyl ( We Are Water Drop Academy).mp3",
+      "./download/new thall/Tabla Ektal (C major) Badth Keyl ( We Are Water Drop Academy).mp3",
+      "./download/new thall/Tbala (Tilawada) Bada Khyal Tall  -We Are  Water Drop Academy.mp3",
+    ];
+
+    const SongNames = [
+      "Ya Kundendu- Saraswati Shlok",
+      "Tampura ( A )",
+      "Tampura ( Bb )",
+      "Tampura ( C )",
+      "Tampura ( D )",
+      "Tampura ( G )",
+      "Tabla Three Thal ( Bb )",
+      "Tabla Dadara Thal ( C )",
+      "Tabla Three Thal ( C ) Tempo 135 ",
+      "Tabla Three Thal ( A ) Tempo 140 ",
+      "Tabla Three Thal ( A-D ) Raga Malkouns Tempo 140 ",
+      "Tabla Three Thal ( C-F ) Raga Malkouns Tempo 140 ",
+      "Tabla Three Thal ( D ) Tempo 140 ",
+      "Tabla Three Thal ( G ) Tempo 140 ",
+      "Tabla Three Thal ( Bb ) Tempo 140 ",
+      "Tabla Three Thal ( C ) Tempo 140 ",
+      "Tabla Three Thal ( C ) Tempo 145",
+      "Tabla Ektal ( A ) Badth Keyl Tempo 130 ",
+      "Tabla Ektal ( Bb ) Badth Keyl",
+      "Tabla Ektal ( C ) Badth Keyl",
+      "Tbala (Tilawada) Bada Khyal Tall",
+    ];
+
+    let currentSongIndex = 0;
+    let repeat = false;
+
+    const mainPlayer = document.getElementById("mainPlayer");
+    const songTitle = document.getElementById("musicTitle");
+    const musicProgress = document.getElementById("musicProgress");
+    const musicPlay = document.getElementById("musicPlay");
+    const musicNext = document.getElementById("musicNext");
+    const musicPrev = document.getElementById("musicPrev");
+    const musicVolumeRange = document.getElementById("musicVolumeRange");
+    const musicRepeat = document.getElementById("musicRepeat");
+
+    function updatePlayIcon(isPlaying) {
+      const iconName = isPlaying ? "pause" : "play";
+      document
+        .getElementById("playIcon")
+        .setAttribute("data-lucide", iconName);
       lucide.createIcons();
+    }
 
-      const songs = [
-        "./download/Ya Kundendu- Saraswati Shlok.mp3",
-        "./download/thal/Thampura A.mp3",
-        "./download/new thall/Tampura Bb.mp3",
-        "./download/thal/Thampura C.mp3",
-        "./download/thal/Thampura D.mp3",
-        "./download/thal/Thampura G.mp3",
-        "./download/thal/Bb Tabla Three Thal.mp3",
-        "./download/thal/Dadara thal C major.mp3",
-        "./download/thal/Three Thal C major.mp3",
-        "./download/new thall/Tabla ( A )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
-        "./download/new thall/Tabla ( A-D ) Raga Malkouns Tempo 140 (We Are Water Drop Academy Design ).mp3",
-        "./download/new thall/Tabla ( C-F ) Raga Malkouns Tempo 140 (We Are Water Drop Academy Design ).mp3",
-        "./download/new thall/Tabla ( D Major )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
-        "./download/new thall/Tabla ( G )  Tempo 140 (We Are Water Drop Academy Design ).mp3",
-        "./download/new thall/Tabla (B Flat)  Tempo 140 (We Are Water Drop Academy Design ).mp3",
-        "./download/new thall/Tabla C major Tempo 140 (We Are Water Drop Academy Design ).mp3",
-        "./download/new thall/Tabla Tempo 145  (C major )  (We Are Water Drop Academy Design ).mp3",
-        "./download/new thall/Tabla Ektal ( A ) Badth Keyl Tempo 130  ( We Are Water Drop Academy).mp3",
-        "./download/new thall/Tabla Ektal (B Flat ) Badth Keyl ( We Are Water Drop Academy).mp3",
-        "./download/new thall/Tabla Ektal (C major) Badth Keyl ( We Are Water Drop Academy).mp3",
-        "./download/new thall/Tbala (Tilawada) Bada Khyal Tall  -We Are  Water Drop Academy.mp3",
-      ];
+    function changeSong() {
+      mainPlayer.src = songs[currentSongIndex];
+      songTitle.innerHTML = SongNames[currentSongIndex];
+      const selector = document.getElementById("SelectSong");
+      if (selector) selector.value = currentSongIndex;
+    }
 
-      const SongNames = [
-        "Ya Kundendu- Saraswati Shlok",
-        "Tampura ( A )",
-        "Tampura ( Bb )",
-        "Tampura ( C )",
-        "Tampura ( D )",
-        "Tampura ( G )",
-        "Tabla Three Thal ( Bb )",
-        "Tabla Dadara Thal ( C )",
-        "Tabla Three Thal ( C ) Tempo 135 ",
-        "Tabla Three Thal ( A ) Tempo 140 ",
-        "Tabla Three Thal ( A-D ) Raga Malkouns Tempo 140 ",
-        "Tabla Three Thal ( C-F ) Raga Malkouns Tempo 140 ",
-        "Tabla Three Thal ( D ) Tempo 140 ",
-        "Tabla Three Thal ( G ) Tempo 140 ",
-        "Tabla Three Thal ( Bb ) Tempo 140 ",
-        "Tabla Three Thal ( C ) Tempo 140 ",
-        "Tabla Three Thal ( C ) Tempo 145",
-        "Tabla Ektal ( A ) Badth Keyl Tempo 130 ",
-        "Tabla Ektal ( Bb ) Badth Keyl",
-        "Tabla Ektal ( C ) Badth Keyl",
-        "Tbala (Tilawada) Bada Khyal Tall",
-      ];
+    function nextSong() {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      changeSong();
+      mainPlayer.play();
+      updatePlayIcon(true);
+    }
 
-      let currentSongIndex = 0;
-      let repeat = false;
+    function prevSong() {
+      currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+      changeSong();
+      mainPlayer.play();
+      updatePlayIcon(true);
+    }
 
-      const mainPlayer = document.getElementById("mainPlayer");
-      const songTitle = document.getElementById("musicTitle");
-      const musicProgress = document.getElementById("musicProgress");
-      const musicPlay = document.getElementById("musicPlay");
-      const musicNext = document.getElementById("musicNext");
-      const musicPrev = document.getElementById("musicPrev");
-      const musicVolumeRange = document.getElementById("musicVolumeRange");
-      const musicRepeat = document.getElementById("musicRepeat");
-
-      function updatePlayIcon(isPlaying) {
-        const iconName = isPlaying ? "pause" : "play";
-        document
-          .getElementById("playIcon")
-          .setAttribute("data-lucide", iconName);
-        lucide.createIcons();
-      }
-
-      function changeSong() {
-        mainPlayer.src = songs[currentSongIndex];
-        songTitle.innerHTML = SongNames[currentSongIndex];
-        const selector = document.getElementById("SelectSong");
-        if (selector) selector.value = currentSongIndex;
-      }
-
-      function nextSong() {
-        currentSongIndex = (currentSongIndex + 1) % songs.length;
-        changeSong();
+    function playPauseSong() {
+      if (mainPlayer.paused) {
         mainPlayer.play();
         updatePlayIcon(true);
+      } else {
+        mainPlayer.pause();
+        updatePlayIcon(false);
       }
+    }
 
-      function prevSong() {
-        currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-        changeSong();
-        mainPlayer.play();
-        updatePlayIcon(true);
+    window.addEventListener("load", () => {
+      let innerText =
+        '<label for="SelectSong" id="SelectSongLable">Select Audio Track</label><select id="SelectSong">';
+      for (let i = 0; i < SongNames.length; i++) {
+        innerText += `<option id="song${i}" value="${i}">${SongNames[i]}</option>`;
       }
+      innerText += "</select>";
+      document.getElementById("SongList").innerHTML = innerText;
 
-      function playPauseSong() {
-        if (mainPlayer.paused) {
-          mainPlayer.play();
-          updatePlayIcon(true);
-        } else {
+      document
+        .getElementById("SelectSong")
+        .addEventListener("change", (e) => {
+          currentSongIndex = parseInt(e.target.value);
+          changeSong();
           mainPlayer.pause();
           updatePlayIcon(false);
+        });
+
+      changeSong();
+    });
+
+    musicNext.addEventListener("click", nextSong);
+    musicPrev.addEventListener("click", prevSong);
+    musicPlay.addEventListener("click", playPauseSong);
+
+    musicRepeat.addEventListener("click", () => {
+      repeat = !repeat;
+      musicRepeat.classList.toggle("active", repeat);
+    });
+
+    musicVolumeRange.addEventListener("input", () => {
+      mainPlayer.volume = musicVolumeRange.value / 100;
+    });
+
+    mainPlayer.addEventListener("timeupdate", () => {
+      if (!mainPlayer.duration) return;
+      musicProgress.value =
+        (mainPlayer.currentTime / mainPlayer.duration) * 100;
+      if (mainPlayer.currentTime >= mainPlayer.duration) {
+        if (repeat) {
+          mainPlayer.currentTime = 0;
+          mainPlayer.play();
+        } else {
+          nextSong();
         }
       }
+    });
 
-      window.addEventListener("load", () => {
-        let innerText =
-          '<label for="SelectSong" id="SelectSongLable">Select Audio Track</label><select id="SelectSong">';
-        for (let i = 0; i < SongNames.length; i++) {
-          innerText += `<option id="song${i}" value="${i}">${SongNames[i]}</option>`;
-        }
-        innerText += "</select>";
-        document.getElementById("SongList").innerHTML = innerText;
+    musicProgress.addEventListener("input", () => {
+      if (!mainPlayer.duration) return;
+      mainPlayer.currentTime =
+        (musicProgress.value * mainPlayer.duration) / 100;
+    });
 
-        document
-          .getElementById("SelectSong")
-          .addEventListener("change", (e) => {
-            currentSongIndex = parseInt(e.target.value);
-            changeSong();
-            mainPlayer.pause();
-            updatePlayIcon(false);
-          });
+    document.getElementById("Download").addEventListener("click", () => {
+      const link = document.createElement("a");
+      link.href = mainPlayer.src;
+      link.download = SongNames[currentSongIndex] + ".mp3";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
 
-        changeSong();
-      });
+    function changeTopImage() {
+      images = [
+        "./download/images/1.webp",
+        "./download/images/2.webp",
+        "./download/images/3.webp",
+      ];
+      const mimg = document.getElementById("mainImg");
+      var sec = new Date().getSeconds();
+      n = sec % 3;
+      console.log(n);
+      mimg.src = images[n];
 
-      musicNext.addEventListener("click", nextSong);
-      musicPrev.addEventListener("click", prevSong);
-      musicPlay.addEventListener("click", playPauseSong);
+      setTimeout(changeTopImage, 10000);
+    }
+    changeTopImage();
+  </script>
+</body>
 
-      musicRepeat.addEventListener("click", () => {
-        repeat = !repeat;
-        musicRepeat.classList.toggle("active", repeat);
-      });
-
-      musicVolumeRange.addEventListener("input", () => {
-        mainPlayer.volume = musicVolumeRange.value / 100;
-      });
-
-      mainPlayer.addEventListener("timeupdate", () => {
-        if (!mainPlayer.duration) return;
-        musicProgress.value =
-          (mainPlayer.currentTime / mainPlayer.duration) * 100;
-        if (mainPlayer.currentTime >= mainPlayer.duration) {
-          if (repeat) {
-            mainPlayer.currentTime = 0;
-            mainPlayer.play();
-          } else {
-            nextSong();
-          }
-        }
-      });
-
-      musicProgress.addEventListener("input", () => {
-        if (!mainPlayer.duration) return;
-        mainPlayer.currentTime =
-          (musicProgress.value * mainPlayer.duration) / 100;
-      });
-
-      document.getElementById("Download").addEventListener("click", () => {
-        const link = document.createElement("a");
-        link.href = mainPlayer.src;
-        link.download = SongNames[currentSongIndex] + ".mp3";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      });
-
-      function changeTopImage() {
-        images = [
-          "./download/images/1.webp",
-          "./download/images/2.webp",
-          "./download/images/3.webp",
-        ];
-        const mimg = document.getElementById("mainImg");
-        var sec = new Date().getSeconds();
-        n = sec % 3;
-        console.log(n);
-        mimg.src = images[n];
-
-        setTimeout(changeTopImage, 10000);
-      }
-      changeTopImage();
-    </script>
-  </body>
 </html>
